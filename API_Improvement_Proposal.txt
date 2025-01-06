@@ -1,0 +1,17 @@
+1. New Routes:
+Summary Route for Agencies:
+Proposed Endpoint: /api/v2/agency/<TOPTIER_AGENCY_CODE>/summary/
+Description: Combine budgetary resources, new awards count, and program activities into a single response. This reduces the number of API calls needed for holistic analysis.
+State Data by Fiscal Year:
+Proposed Endpoint: /api/v2/recipient/state/<FISCAL_YEAR>/
+Description: Include grants, loans, and population data in one endpoint for a specific fiscal year, simplifying state-level queries.
+2. Renaming Input Parameters:
+Rename fiscal_year to year for consistency with common naming conventions.
+Rename toptier_agency_code to agency_code for brevity.
+3. Output Data Format Adjustments:
+Include total fields (e.g., total_population, total_awards) at the root level of responses to provide aggregate summaries.
+Standardize monetary fields (e.g., total_obligations, grant_total) to include both integer values and formatted strings ($1,000,000).
+4. Documentation Enhancements:
+Provide comprehensive examples for each endpoint, including both input and output JSON.
+Clearly define all possible values for parameters like award_type_codes.
+Include common use cases and sample queries for developers.
